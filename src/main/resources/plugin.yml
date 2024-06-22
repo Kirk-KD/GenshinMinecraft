@@ -1,0 +1,11 @@
+name: GenshinMinecraft
+version: '${project.version}'
+main: com.github.kirkkd.genshinminecraft.GenshinMinecraft
+api-version: '1.21'
+commands:
+  apply:
+    description: Apply an element to yourself.
+    usage: /<command> element
+  infuse:
+    description: Infuse the currently held item with an element.
+    usage: /<command> element
