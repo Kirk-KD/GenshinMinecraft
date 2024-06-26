@@ -68,7 +68,7 @@ public class Hydro extends Element {
 
     @Override
     protected Reaction getCombinationReaction(Pyro pyro) {
-        return new Vaporize(getHost());
+        return new Vaporize(getHost(), getApplier());
     }
 
     @Override

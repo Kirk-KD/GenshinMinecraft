@@ -1,5 +1,6 @@
 package com.github.kirkkd.genshinminecraft.elemental.items.infusions;
 
+import com.github.kirkkd.genshinminecraft.elemental.ElementalInfo;
 import com.github.kirkkd.genshinminecraft.elemental.elements.Cryo;
 import com.github.kirkkd.genshinminecraft.elemental.entities.ElementalEntity;
 import org.bukkit.entity.LivingEntity;
@@ -11,8 +12,8 @@ public class CryoInfusion extends ElementalInfusion {
     }
 
     @Override
-    public String getName() {
-        return Cryo.COLOR + Cryo.NAME;
+    public ElementalInfo getElementalInfo() {
+        return ElementalInfo.CRYO;
     }
 
     @Override

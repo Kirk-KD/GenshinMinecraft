@@ -1,5 +1,6 @@
 package com.github.kirkkd.genshinminecraft.elemental.items.infusions;
 
+import com.github.kirkkd.genshinminecraft.elemental.ElementalInfo;
 import com.github.kirkkd.genshinminecraft.elemental.elements.Anemo;
 import com.github.kirkkd.genshinminecraft.elemental.entities.ElementalEntity;
 import org.bukkit.entity.LivingEntity;
@@ -11,8 +12,8 @@ public class AnemoInfusion extends ElementalInfusion {
     }
 
     @Override
-    public String getName() {
-        return Anemo.COLOR + Anemo.NAME;
+    public ElementalInfo getElementalInfo() {
+        return ElementalInfo.ANEMO;
     }
 
     @Override

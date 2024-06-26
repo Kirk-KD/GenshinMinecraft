@@ -1,5 +1,6 @@
 package com.github.kirkkd.genshinminecraft.elemental.items.infusions;
 
+import com.github.kirkkd.genshinminecraft.elemental.ElementalInfo;
 import com.github.kirkkd.genshinminecraft.elemental.elements.Dendro;
 import com.github.kirkkd.genshinminecraft.elemental.entities.ElementalEntity;
 import org.bukkit.entity.LivingEntity;
@@ -11,8 +12,8 @@ public class DendroInfusion extends ElementalInfusion {
     }
 
     @Override
-    public String getName() {
-        return Dendro.COLOR + Dendro.NAME;
+    public ElementalInfo getElementalInfo() {
+        return ElementalInfo.DENDRO;
     }
 
     @Override

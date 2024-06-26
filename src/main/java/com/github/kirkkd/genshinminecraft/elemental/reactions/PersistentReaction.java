@@ -2,6 +2,7 @@ package com.github.kirkkd.genshinminecraft.elemental.reactions;
 
 import com.github.kirkkd.genshinminecraft.GenshinMinecraft;
 import com.github.kirkkd.genshinminecraft.elemental.entities.ElementalEntity;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
@@ -14,7 +15,11 @@ public abstract class PersistentReaction extends Reaction {
     protected BukkitTask particlesTask = null;
 
     public PersistentReaction(ElementalEntity host) {
-        super(host);
+        this(host, null);
+    }
+
+    public PersistentReaction(ElementalEntity host, LivingEntity applier) {
+        super(host, applier);
     }
 
     @Override

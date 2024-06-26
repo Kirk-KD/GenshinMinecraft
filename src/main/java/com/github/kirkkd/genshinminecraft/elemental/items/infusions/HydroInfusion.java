@@ -1,5 +1,6 @@
 package com.github.kirkkd.genshinminecraft.elemental.items.infusions;
 
+import com.github.kirkkd.genshinminecraft.elemental.ElementalInfo;
 import com.github.kirkkd.genshinminecraft.elemental.elements.Hydro;
 import com.github.kirkkd.genshinminecraft.elemental.entities.ElementalEntity;
 import org.bukkit.entity.LivingEntity;
@@ -11,8 +12,8 @@ public class HydroInfusion extends ElementalInfusion {
     }
 
     @Override
-    public String getName() {
-        return Hydro.COLOR + Hydro.NAME;
+    public ElementalInfo getElementalInfo() {
+        return ElementalInfo.HYDRO;
     }
 
     @Override

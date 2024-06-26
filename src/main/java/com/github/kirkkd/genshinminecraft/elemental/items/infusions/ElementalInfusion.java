@@ -1,6 +1,7 @@
 package com.github.kirkkd.genshinminecraft.elemental.items.infusions;
 
 import com.github.kirkkd.genshinminecraft.GenshinMinecraft;
+import com.github.kirkkd.genshinminecraft.elemental.ElementalInfo;
 import com.github.kirkkd.genshinminecraft.elemental.elements.*;
 import org.bukkit.ChatColor;
 import org.bukkit.NamespacedKey;
@@ -95,7 +96,11 @@ public abstract class ElementalInfusion {
         return ChatColor.GRAY + "Infused with " + ChatColor.BOLD + getName();
     }
 
-    public abstract String getName();
+    public abstract ElementalInfo getElementalInfo();
+
+    public String getName() {
+        return getElementalInfo().nameCapitalizedStylized;
+    }
 
     public abstract void onInfusionAffectEntity(LivingEntity attacker, LivingEntity victim);
 }

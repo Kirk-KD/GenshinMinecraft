@@ -49,7 +49,7 @@ public class Pyro extends Element {
 
     @Override
     protected Reaction getCombinationReaction(Electro electro) {
-        return new Overload(getHost());
+        return new Overload(getHost(), getApplier());
     }
 
     @Override
@@ -59,7 +59,7 @@ public class Pyro extends Element {
 
     @Override
     protected Reaction getCombinationReaction(Hydro hydro) {
-        return new Vaporize(getHost());
+        return new Vaporize(getHost(), getApplier());
     }
 
     @Override

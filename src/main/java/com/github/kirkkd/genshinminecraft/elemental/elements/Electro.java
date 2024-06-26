@@ -66,7 +66,7 @@ public class Electro extends Element {
 
     @Override
     protected Reaction getCombinationReaction(Pyro pyro) {
-        return new Overload(getHost());
+        return new Overload(getHost(), getApplier());
     }
 
     @Override

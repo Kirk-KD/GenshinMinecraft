@@ -86,7 +86,8 @@ public class ElementsEventListener implements Listener {
 
     @EventHandler
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
-        if (event.getDamager() instanceof Player player && event.getEntity() instanceof LivingEntity victim) {
+        if (event.getDamager() instanceof Player player
+                && event.getEntity() instanceof LivingEntity victim) {
             ItemStack heldItem = player.getInventory().getItemInMainHand();
             if (heldItem.getAmount() != 0) {
                 ElementalInfusion infusion = ElementalInfusion.fromItemStack(heldItem);

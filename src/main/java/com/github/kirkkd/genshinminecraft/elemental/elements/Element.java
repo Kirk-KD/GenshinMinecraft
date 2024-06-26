@@ -91,10 +91,12 @@ public abstract class Element extends ElementTextDisplay implements IElemental {
 
     public abstract String getVerb();
 
+    @Override
     public ElementalEntity getHost() {
         return host;
     }
 
+    @Override
     public LivingEntity getApplier() {
         return applier;
     }

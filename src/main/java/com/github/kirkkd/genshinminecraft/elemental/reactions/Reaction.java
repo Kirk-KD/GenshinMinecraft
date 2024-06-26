@@ -4,16 +4,22 @@ import com.github.kirkkd.genshinminecraft.elemental.IElemental;
 import com.github.kirkkd.genshinminecraft.elemental.entities.ElementalEntity;
 import com.github.kirkkd.genshinminecraft.util.display.ReactionTextDisplay;
 import com.github.kirkkd.genshinminecraft.util.particles.EntityParticleSystem;
-import com.github.kirkkd.genshinminecraft.util.display.TemporaryTextDisplay;
 import org.bukkit.Location;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.util.Vector;
 
 public abstract class Reaction extends ReactionTextDisplay implements IElemental {
     private final ElementalEntity host;
+    private final LivingEntity applier;
     protected EntityParticleSystem entityParticleSystem = null;
 
     public Reaction(ElementalEntity host) {
+        this(host, null);
+    }
+
+    public Reaction(ElementalEntity host, LivingEntity applier) {
         this.host = host;
+        this.applier = applier;
     }
 
     public void spawnParticlesTick() {
@@ -31,8 +37,14 @@ public abstract class Reaction extends ReactionTextDisplay implements IElemental
 
     public abstract String getVerb();
 
+    @Override
     public ElementalEntity getHost() {
         return host;
+    }
+
+    @Override
+    public LivingEntity getApplier() {
+        return applier;
     }
 
     public String getDisplayText() {
